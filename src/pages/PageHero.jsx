@@ -1,0 +1,2 @@
+import Neural from '../Neural';import {Reveal} from '../ui';
+export default function PageHero({title,sub}){return <section className="relative overflow-hidden bg-gradient-to-b from-ice to-white pt-36 pb-16 md:pt-44 md:pb-20"><Neural className="opacity-60"/><div className="wrap relative"><Reveal><h1 className="max-w-4xl text-4xl md:text-6xl font-extrabold text-navy leading-[1.02]">{title}</h1>{sub&&<p className="mt-6 max-w-2xl text-lg text-ink/70">{sub}</p>}</Reveal></div></section>}

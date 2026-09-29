@@ -1,0 +1,17 @@
+import {Reveal,Heading,Icon} from '../ui';import {STEPS} from '../data';import {CTA} from './Home';import PageHero from './PageHero';
+export default function Technology(){return <>
+<PageHero title="Mastiksh Yantra" sub="A semi-automated electrochemical biosensing platform for early detection of neurodegenerative disorders."/>
+<section className="sec"><div className="wrap grid items-center gap-14 lg:grid-cols-2">
+ <Reveal><img src="./img/device.jpg" alt="Mastiksh Yantra neurodiagnostic platform" className="w-full rounded-3xl shadow-2xl ring-1 ring-navy/10"/></Reveal>
+ <Reveal delay={120}><h2 className="text-3xl md:text-4xl font-bold text-navy leading-tight">A next-generation neurodiagnostic platform</h2>
+  <p className="mt-4 text-lg text-ink/75 leading-relaxed">Mastiksh Yantra enables early detection of neurological disorders through advanced biosensing and AI-driven analysis, in a compact instrument with a touchscreen interface.</p>
+  <div className="mt-8 grid grid-cols-2 gap-4">{[['drop','Blood-based biomarker detection'],['target','High accuracy and fast results'],['touch','User-friendly and portable'],['shield','Affordable and accessible']].map(([i,t])=><div key={t} className="rounded-2xl bg-ice p-4 ring-1 ring-navy/10"><Icon n={i} c="h-7 w-7 text-teal"/><p className="mt-3 text-sm font-semibold text-navy">{t}</p></div>)}</div></Reveal>
+</div></section>
+<section className="sec bg-ice"><div className="wrap"><Heading title="How it works" sub="Electrochemical biosensing measures how a sensor&rsquo;s electrical signal changes when target biomarkers are present."/>
+ <div className="relative grid gap-5 md:grid-cols-5"><div className="absolute left-0 right-0 top-9 hidden h-px bg-gradient-to-r from-transparent via-teal/50 to-transparent md:block"/>
+ {STEPS.map(([t,d],i)=><Reveal key={t} delay={i*110}><div className="relative text-center md:text-left"><div className="mx-auto md:mx-0 grid h-[72px] w-[72px] place-items-center rounded-full bg-white font-display text-2xl font-extrabold text-navy ring-2 ring-teal/40">{i+1}</div><h3 className="mt-4 text-lg font-bold text-navy">{t}</h3><p className="mt-1 text-sm text-ink/70 leading-relaxed">{d}</p></div></Reveal>)}</div>
+</div></section>
+<section className="sec"><div className="wrap"><Heading title="Target biomarkers"/>
+ <div className="grid gap-6 md:grid-cols-2">{[['NfL','Neurofilament Light Chain','A marker of neuronal damage and axonal injury, useful for detecting neurodegeneration and disease progression.'],['GFAP','Glial Fibrillary Acidic Protein','A marker of astrocyte activation and brain injury, elevated in neurodegenerative diseases such as Alzheimer\'s disease.'],['Aβ42/40','Amyloid-beta 42/40 Ratio','Measures the ratio of amyloid-beta 42 to amyloid-beta 40; a reduced ratio is associated with amyloid plaque accumulation in Alzheimer\'s disease.'],['p-tau181/217','Phosphorylated Tau 181/217','Blood biomarkers reflecting abnormal tau phosphorylation, strongly associated with Alzheimer\'s disease pathology and tau accumulation.']].map(([a,b,c],i)=><Reveal key={a} delay={i*120}><div className="rounded-3xl bg-navy p-8 text-white h-full"><div className="font-display text-5xl font-extrabold text-teal-400">{a}</div><h3 className="mt-2 text-lg font-semibold">{b}</h3><p className="mt-3 text-white/70">{c}</p></div></Reveal>)}</div>
+ <Reveal><p className="mt-8 text-sm text-ink/55 max-w-3xl">Mastiksh Yantra is under development. Performance claims will be published only after validation.</p></Reveal>
+</div></section><CTA/></>}

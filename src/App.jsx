@@ -1,0 +1,4 @@
+import {Routes,Route} from 'react-router-dom';import {Header,Footer} from './Layout';
+import Home from './pages/Home';import About from './pages/About';import Technology from './pages/Technology';import Research from './pages/Research';import Team from './pages/Team';import Contact from './pages/Contact';
+export default function App(){return <><a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:z-[60] focus:bg-white focus:p-3">Skip to content</a><Header/><main id="main"><Routes>
+<Route path="/" element={<Home/>}/><Route path="/about" element={<About/>}/><Route path="/technology" element={<Technology/>}/><Route path="/research" element={<Research/>}/><Route path="/team" element={<Team/>}/><Route path="/contact" element={<Contact/>}/><Route path="*" element={<Home/>}/></Routes></main><Footer/></>}

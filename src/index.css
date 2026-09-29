@@ -1,0 +1,14 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}
+body{@apply font-body text-ink bg-white antialiased}
+h1,h2,h3,h4{@apply font-display tracking-tight}
+:focus-visible{outline:2px solid #12A0B8;outline-offset:3px}
+.wrap{@apply mx-auto w-full max-w-6xl px-5 md:px-8}
+.sec{@apply py-20 md:py-28}
+.btn{@apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300}
+.btn-p{@apply btn bg-navy text-white hover:bg-teal hover:-translate-y-0.5}
+.btn-o{@apply btn border border-navy/25 text-navy hover:border-teal hover:text-teal}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.curve{stroke-dasharray:1200;stroke-dashoffset:0;animation:draw 3.2s .4s cubic-bezier(.4,0,.2,1) forwards}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.curve{stroke-dashoffset:0}}
